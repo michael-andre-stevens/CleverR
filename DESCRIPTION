@@ -1,13 +1,24 @@
 Package: CleverR
-Title: What the Package Does (One Line, Title Case)
+Title: Functions For Clever Notebooks
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Michael",
+           family = "Stevens",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "michael.andre.stevens@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0002-1999-1575"))
+Description: CleverR streamlines the process of generating analysis notebooks. It provides skeletons for R markdown files and basic functions for inspection of the data. 
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    base,
+    dplyr,
+    magrittr,
+    stringr,
+    forcats,
+    lubridate,
+    rlang,
+    tidyr,
+    tibble
+RoxygenNote: 6.1.1
