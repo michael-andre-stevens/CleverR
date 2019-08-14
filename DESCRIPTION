@@ -20,5 +20,9 @@ Imports:
     lubridate,
     rlang,
     tidyr,
-    tibble
+    tibble,
+    likert,
+    gridExtra,
+    ggplot2,
+    scales
 RoxygenNote: 6.1.1
