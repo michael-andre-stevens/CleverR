@@ -8,4 +8,7 @@
 #' @export
 #' @importFrom magrittr %>%
 #' @usage lhs \%>\% rhs
+#' @importFrom rlang .data
+#' @importFrom rlang ":="
 NULL
+

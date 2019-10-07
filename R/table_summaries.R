@@ -8,8 +8,6 @@
 #' @export
 #'
 #' @examples datasets::mtcars %>% compute_size()
-#' @importFrom rlang .data
-#' @importFrom rlang ":="
 compute_size <- function(x) {
 
   n_rows <- x %>% nrow()
