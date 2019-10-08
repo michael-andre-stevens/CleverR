@@ -19,7 +19,7 @@ do_downsample <- function(x, downsample="auto") {
 
   if (downsample>1) {
     x %>%
-      dplyr::ungroup %>%
+      dplyr::ungroup() %>%
       dplyr::mutate(obs=1:dplyr::n()) %>%
       dplyr::filter(.data$obs%%downsample==0)
   } else {
