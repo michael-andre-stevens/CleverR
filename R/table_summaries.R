@@ -414,6 +414,7 @@ compute_tables <- function(x, max_distinct_values=11) {
   x <- x %>% dplyr::mutate_if(is.factor, fct_lump_fnc, max_distinct_values=max_distinct_values)
   x <- x %>% dplyr::mutate_if(is.logical, logical2revfactor_fnc)
   x <- x %>% dplyr::mutate_if(is_likert, likert2revfactor_fnc)
+  x <- x %>% dplyr::mutate_if(is.factor, forcats::fct_explicit_na)
 
   out <- vector("list", ncol(x))
   names(out) <- names(x)

@@ -294,7 +294,8 @@ plot_factor <- function(x, variable, max_distinct_values=11, downsample="auto") 
   writeLines("")
 
   x <- x %>%
-    dplyr::mutate(lumped_variable = fct_lump_fnc(!! variable, max_distinct_values))
+    dplyr::mutate(lumped_variable = forcats::fct_explicit_na(!! variable)) %>%
+    dplyr::mutate(lumped_variable = fct_lump_fnc(.data$lumped_variable, max_distinct_values))
 
   plot1 <- panel_barplot(x, .data$lumped_variable) + ggplot2::coord_flip()
   plot2 <- panel_missingplot(x, .data$lumped_variable, downsample=downsample)

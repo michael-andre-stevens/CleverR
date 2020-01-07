@@ -3,7 +3,6 @@
 \docType{package}
 \name{cleverR}
 \alias{cleverR}
-\alias{cleverR-package}
 \title{cleverR: Functions For Clever Notebooks.}
 \description{
 The foo package provides three categories of important functions:
